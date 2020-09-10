@@ -7,7 +7,7 @@ class DropDown{
     }
 
     renderDropDown (id){
-        console.log(id);
+       
         var dropdown, container, div, title;
 
         dropdown = document.createElement('div');
@@ -25,11 +25,6 @@ class DropDown{
         div.setAttribute('class', 'dropdown-content');
         div.setAttribute('id', `dropdown-content-${this.title}`);
         dropdown.appendChild(div);
-
-        console.log(this.list);
-        console.log(typeof(this.list));
-        console.log(this.title);
-        console.log(typeof(this.title));
 
         if (typeof(this.list) != 'undefined') {
             
@@ -63,7 +58,7 @@ class DropDown{
     }
 
     toggleDropDown (){
-        console.log(this.title);
+        
         document.querySelector('#dropdown-content-'+this.title).classList.toggle("show");
     }
 

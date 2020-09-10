@@ -31,8 +31,6 @@ class FormCreator {
 
     formRender () {
 
-        console.log(this.parentClass);
-
         this.form.forEach(element => {
            var elem = document.createElement(element.name);
            elem.setAttribute('type', element.type);
