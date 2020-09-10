@@ -94,7 +94,9 @@ class DropDown{
 }
 
 // window.onclick = function(event) {
-//     if (!event.target.matches('.droptitle') || !event.target.matches('.dropdownInputs')) {
+//     console.log(event.target.classList[0]);
+
+//     if (event.target.classList[0] !== 'droptitle' && event.target.classList[0] !== 'dropdownInpots') {
 //       var dropdowns = document.getElementsByClassName("dropdown-content");
 //       var i;
 //       for (i = 0; i < dropdowns.length; i++) {
