@@ -35,7 +35,7 @@ class Table {
                 input.setAttribute('class', 'cellInput');
                 input.setAttribute('id', 'cellInput-'+i+j);
                 input.setAttribute('placeholder', 'insert text');
-                input.addEventListener('click', (event)=> this.dropDown());
+                input.addEventListener('click', (event)=> this.dropDown(event));
 
                 header.appendChild(input);
                 row.appendChild(header);
@@ -49,7 +49,7 @@ class Table {
                 input.setAttribute('class', 'cellInput');
                 input.setAttribute('id', 'cellInput-'+i+j);
                 input.setAttribute('placeholder', 'insert text');
-                input.addEventListener('click', (event)=> this.dropDown());
+                input.addEventListener('click', (event)=> this.dropDown(event));
 
                 cell.appendChild(input);
                 row.appendChild(cell);
@@ -61,9 +61,9 @@ class Table {
 
     }
 
-    dropDown () {
+    dropDown (event) {
         
-        var id = event.path[0].id;
+        var id = event.target.id;
         var drop = document.querySelector('.dropdown-container');
         drop.innerHTML = "";
 
